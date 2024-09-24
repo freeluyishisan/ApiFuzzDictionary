@@ -14,10 +14,6 @@ rules:
   # URL主机部分为IP，内置规则
   - id: ip_url
     enabled: true
-  # 邮箱
-  - id: email
-    enabled: false
-    pattern: \b[A-Za-z0-9._\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,61}\b
   # 二代身份证
   - id: id_card
     enabled: true
@@ -54,10 +50,6 @@ rules:
   - id: Ueditor
     enabled: true
     pattern: \b(ueditor\.(config|all)\.js)\b
-  # Email
-  - id: Email
-    enabled: true
-    pattern: \b(([a-z0-9][_|\.])*[a-z0-9]+@([a-z0-9][-|_|\.])*[a-z0-9]+\.((?!js|css|jpg|jpeg|png|ico)[a-z]{2,}))\b
   # Internal IP Address
   - id: Internal_IP_Address
     enabled: true
