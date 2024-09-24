@@ -108,7 +108,7 @@ rules:
   #敏感文件
   - id: 敏感文件
     enabled: true
-    pattern: ((?:^|\/)[a-zA-Z0-9-_]+(\.(?:apk|bmp|cgi|csv|db|dmg|do|doc|exe|gz|json|pdf|ppt|rar|sqlite|tar|txt|wav|webm|webp|xls|xml|zip)))
+    pattern: ((?:^|\/)[a-zA-Z0-9-_]+(\.(?:apk|bmp|csv|db|dmg|doc|gz|pdf|ppt|rar|sqlite|tar|txt|wav|webm|xls|xml|zip)))
   #可能的未授权访问风险
   - id: 可能的未授权访问风险
     enabled: true
