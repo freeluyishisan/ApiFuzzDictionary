@@ -37,7 +37,11 @@ rules:
    # Shiro
   - id: Shiro
     enabled: true
-    pattern: (=deleteMe|rememberMe=)
+    pattern: \b(=deleteMe|rememberMe=)\b
+  # 文件名规则
+   - id: Filename
+    enabled: true
+    pattern: \b(?:filename|filepath|inputfile|readfile|download|file)=([^\s]+)\b
   # 阿里云 AccessKey ID (不要修改ID)
   - id: Aliyun_AK_ID
     enabled: true
