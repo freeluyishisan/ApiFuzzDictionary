@@ -42,38 +42,7 @@ rules:
   - id: Chinese_Bank_Card_ID
     enabled: true
     pattern: \b[^0-9]([1-9]\d{12,18})[^0-9]\b
-  # RCE Parameters
-  - id: RCE_Parameters
-    enabled: true
-    pattern: \b((cmd=)|(exec=)|(command=)|(execute=)|(ping=)|(query=)|(jump=)|(code=)|(reg=)|(do=)|(func=)|(arg=)|(option=)|(load=)|(process=)|(step=)|(read=)|(function=)|(feature=)|(exe=)|(module=)|(payload=)|(run=)|(daemon=)|(upload=)|(dir=)|(download=)|(log=)|(ip=)|(cli=))\b
-  # Java Deserialization
-  - id: Java_Deserialization
-    enabled: true
-    pattern: \b(javax\.faces\.ViewState)\b
-  # Debug Logic Parameters
-  - id: Debug_Logic_Parameters
-    enabled: true
-    pattern: \b((access=)|(adm=)|(admin=)|(alter=)|(cfg=)|(clone=)|(config=)|(create=)|(dbg=)|(debug=)|(delete=)|(disable=)|(edit=)|(enable=)|(exec=)|(execute=)|(grant=)|(load=)|(make=)|(modify=)|(rename=)|(reset=)|(root=)|(shell=)|(test=)|(toggl=))\b
-  # URL As A Value
-  - id: URL_As_A_Value
-    enabled: true
-    pattern: \b(=(https?://.*|https?%3(a|A)%2(f|F)%2(f|F).*))\b
-  # Upload Form
-  - id: Upload_Form
-    enabled: true
-    pattern: \b(type=\"file\")\b
-  # DoS Parameters
-  - id: DoS_Parameters
-    enabled: true
-    pattern: \b((size=)|(page=)|(num=))\b
-  # JSONP Response
-  - id: JSONP_Response
-    enabled: true
-    pattern: \b(^(\w.*?)\()\b
-  # OSS
-  - id: OSS
-    enabled: true
-    pattern: \b([A|a]ccess[K|k]ey[I|i][d|D]|[A|a]ccess[K|k]ey[S|s]ecret)\b
+
   # Amazon AWS AccessKey ID
   - id: Amazon_AWS_AccessKey_ID
     enabled: true
