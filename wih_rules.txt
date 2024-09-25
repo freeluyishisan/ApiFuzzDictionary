@@ -42,7 +42,6 @@ rules:
   - id: Chinese_Bank_Card_ID
     enabled: true
     pattern: \b[^0-9]([1-9]\d{12,18})[^0-9]\b
-
   # Amazon AWS AccessKey ID
   - id: Amazon_AWS_AccessKey_ID
     enabled: true
@@ -87,6 +86,7 @@ rules:
   - id: VolcanoEngine_AK_ID
     enabled: true
     pattern: \b(?:AKLT|AKTP)[a-zA-Z0-9]{35,50}\b
+	
   # 金山云 AccessKey ID
   - id: Kingsoft_AK_ID
     enabled: true
