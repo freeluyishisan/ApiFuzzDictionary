@@ -82,11 +82,6 @@ rules:
   - id: Amazon_AWS_Region
     enabled: true
     pattern: \b((us(-gov)?|ap|ca|cn|eu|sa)-(central|(north|south)?(east|west)?)-\d)\b
-  # SSH Private Key
-  - id: SSH_Private_Key
-    enabled: true
-    pattern: \b([-]+BEGIN [^\s]+ PRIVATE KEY[-])\b
-	
   # 邮箱
   - id: email
     enabled: false
