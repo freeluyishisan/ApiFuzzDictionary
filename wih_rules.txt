@@ -13,7 +13,7 @@ rules:
 
   # URL主机部分为域名，内置规则
   - id: domain_url
-    enabled: true
+    enabled: false
 
   # URL主机部分为IP，内置规则
   - id: ip_url
@@ -203,7 +203,7 @@ rules:
   # 敏感文件
   - id: 敏感文件
     enabled: true
-    pattern: ((?:^|\/)[a-zA-Z0-9-_]+(\.(?:apk|bmp|csv|db|dmg|do|doc|gz|json|pdf|ppt|rar|sqlite|tar|txt|wav|webm|webp|xml|zip|7z)))
+    pattern: ((?:^|\/)[a-zA-Z0-9-_]+(\.(?:apk|bmp|csv|db|dmg|do|doc|gz|pdf|ppt|rar|sqlite|tar|txt|wav|webm|webp|xml|zip|7z)))
   # 可能的未授权访问风险
   - id: 可能的未授权访问风险
     enabled: true
