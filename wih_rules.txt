@@ -78,10 +78,6 @@ rules:
   - id: Amazon_AWS_AccessKey_ID
     enabled: true
     pattern: \b[^0-9]((aws(.{0,20})?(?-i)['\"][0-9a-zA-Z\/+]{40}['\"])|((A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[a-zA-Z0-9]{16}))[^0-9]\b
-  # Amazon AWS Region
-  - id: Amazon_AWS_Region
-    enabled: true
-    pattern: \b((us(-gov)?|ap|ca|cn|eu|sa)-(central|(north|south)?(east|west)?)-\d)\b
   # 邮箱
   - id: email
     enabled: false
