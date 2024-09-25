@@ -30,10 +30,22 @@ rules:
   - id: Swagger_UI
     enabled: true
     pattern: \b((swagger-ui.html)|(\"swagger\":)|(Swagger UI)|(swaggerUi))\b
-
+  # Ueditor
+  - id: Ueditor
+    enabled: true
+    pattern: \b(ueditor\.(config|all)\.js)\b
+  # MAC Address
+  - id: MAC_Address
+    enabled: true
+    pattern: \b(^([a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5})|[^a-zA-Z0-9]([a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5}))\b
+  # Chinese Bank Card ID
+  - id: Chinese_Bank_Card_ID
+    enabled: true
+    pattern: \b[^0-9]([1-9]\d{12,18})[^0-9]\b
+	
   # 邮箱
   - id: email
-    enabled: false
+    enabled: true
     pattern: \b[A-Za-z0-9._\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,61}\b
   # 二代身份证
   - id: id_card
