@@ -46,14 +46,7 @@ rules:
   - id: RCE_Parameters
     enabled: true
     pattern: \b((cmd=)|(exec=)|(command=)|(execute=)|(ping=)|(query=)|(jump=)|(code=)|(reg=)|(do=)|(func=)|(arg=)|(option=)|(load=)|(process=)|(step=)|(read=)|(function=)|(feature=)|(exe=)|(module=)|(payload=)|(run=)|(daemon=)|(upload=)|(dir=)|(download=)|(log=)|(ip=)|(cli=))\b
-  # ssrf
-  - id: ssrf_Parameters
-    enabled: true
-    pattern: \b((share=)|(file=)|(wap=)|(link=)|(src=)|(source=)|(target=)|(u=)|(display=)|(sourceURl=)|(imageURL=)|(domain=)|(wap=))\b
-	# api url
-  - id: api_url
-    enabled: true
-    pattern: \b((type:"POST")|(path:")|(url:"))\b
+
   # Java Deserialization
   - id: Java_Deserialization
     enabled: true
