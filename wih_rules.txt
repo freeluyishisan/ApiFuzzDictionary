@@ -2,7 +2,7 @@ rules:
   # 域名，内置规则
   - id: domain
     enabled: true
-  # IP， 内置规则
+  # IP，内置规则
   - id: ip
     enabled: false
   # 路径，内置规则
@@ -95,26 +95,26 @@ rules:
     enabled: true
     pattern: \b([1-9]\d{5}(19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx])\b
   # Netscaler and Citrix ADC
-  - id: Netscaler or Citrix ADC
+  - id: Netscaler_or_Citrix_ADC
     enabled: true
     pattern: \/vpn\/images\/AccessGateway\.ico|receiver\/images\/common\/icon_vpn\.ico
   # 手机号
   - id: phone
     enabled: true
     pattern: \b1[3-9]\d{9}\b
-  # jwt token (不要修改ID)
+  # jwt token
   - id: jwt_token
     enabled: true
     pattern: eyJ[A-Za-z0-9_/+\-]{10,}={0,2}\.[A-Za-z0-9_/+\-\\]{15,}={0,2}\.[A-Za-z0-9_/+\-\\]{10,}={0,2}
-  # 阿里云 AccessKey ID (不要修改ID)
+  # 阿里云 AccessKey ID
   - id: Aliyun_AK_ID
     enabled: true
     pattern: \bLTAI[A-Za-z\d]{12,30}\b
-  # 腾讯云 AccessKey ID (不要修改ID)
+  # 腾讯云 AccessKey ID
   - id: QCloud_AK_ID
     enabled: true
     pattern: \bAKID[A-Za-z\d]{13,40}\b
-  # 京东云 AccessKey ID (不要修改ID)
+  # 京东云 AccessKey ID
   - id: JDCloud_AK_ID
     enabled: true
     pattern: \bJDC_[0-9A-Z]{25,40}\b
@@ -134,7 +134,7 @@ rules:
   - id: GCP_AK_ID
     enabled: true
     pattern: \bAIza[0-9A-Za-z_\-]{35}\b
-  # 提取 SecretKey, 内置规则
+  # 提取 SecretKey
   - id: secret_key
     enabled: true
   # Bearer Token
@@ -153,43 +153,43 @@ rules:
   - id: private_key
     enabled: true
     pattern: -----\s*?BEGIN[ A-Z0-9_-]*?PRIVATE KEY\s*?-----[a-zA-Z0-9\/\n\r=+]*-----\s*?END[ A-Z0-9_-]*? PRIVATE KEY\s*?-----
-  #Gitlab V2 Token
+  # Gitlab V2 Token
   - id: gitlab_v2_token
     enabled: true
     pattern: \b(glpat-[a-zA-Z0-9\-=_]{20,22})\b
-  #Github Token
+  # Github Token
   - id: github_token
     enabled: true
     pattern: \b((?:ghp|gho|ghu|ghs|ghr|github_pat)_[a-zA-Z0-9_]{36,255})\b
-  #腾讯云 API网关 APPKEY
+  # 腾讯云 API网关 APPKEY
   - id: qcloud_api_gateway_appkey
     enabled: true
     pattern: \bAPID[a-zA-Z0-9]{32,42}\b
-  #微信 公众号/小程序 APPID
+  # 微信 公众号/小程序 APPID
   - id: wechat_appid
     enabled: true
     pattern: '["''](wx[a-z0-9]{15,18})["'']'
-  #企业微信 corpid
+  # 企业微信 corpid
   - id: wechat_corpid
     enabled: true
     pattern: '["''](ww[a-z0-9]{15,18})["'']'
-  #微信公众号
+  # 微信公众号
   - id: wechat_id
     enabled: true
     pattern: '["''](gh_[a-z0-9]{11,13})["'']'
-  #敏感文件
+  # 敏感文件
   - id: 敏感文件
     enabled: true
     pattern: ((?:^|\/)[a-zA-Z0-9-_]+(\.(?:apk|bmp|csv|db|dmg|do|doc|gz|json|pdf|ppt|rar|sqlite|tar|txt|wav|webm|webp|xml|zip|7z)))
-  #可能的未授权访问风险
+  # 可能的未授权访问风险
   - id: 可能的未授权访问风险
     enabled: true
     pattern: \b((ftp|ldap|smtp)\:\\\\|(ftp|ldap|smtp)\:\/\/)
-  #前端有可还原代码
+  # 前端有可还原代码
   - id: 前端有可还原代码
     enabled: true
     pattern: (sourceMappingURL=[a-zA-Z0-9\-_]+\.[a-zA-Z0-9\-_]+\.js\.map|sourceMappingURL=[a-zA-Z0-9\-_]+\.js\.map)
-  #Prometheus未授权访问
+  # Prometheus未授权访问
   - id: Prometheus未授权访问
     enabled: true
     pattern: "Prometheus Time Series Collection and Processing Server"
@@ -225,10 +225,11 @@ rules:
   - id: grafana_service_account_token
     enabled: true
     pattern: \bglsa_[A-Za-z0-9]{32}_[A-Fa-f0-9]{8}\b
+  # app_key
   - id: app_key
     enabled: true
     pattern: \b(?:VUE|APP|REACT)_[A-Z_0-9]{1,15}_(?:KEY|PASS|PASSWORD|TOKEN|APIKEY)['"]*[:=]"(?:[A-Za-z0-9_\-]{15,50}|[a-z0-9/+]{50,100}==?)"
-  #腾讯文档识别
+  # 腾讯文档识别
   - id: 腾讯文档
     enabled: true
     pattern: \bhttps://docs.qq.com/[a-z0-9\-]*/+[a-zA-Z0-9\-_]*
