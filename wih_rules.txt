@@ -22,6 +22,15 @@ rules:
   - id: Filename
     enabled: true
     pattern: \b(?:filename|filepath|inputfile|readfile|download|file)=([^\s]+)\b
+  # JSON Web Token
+  - id: JSON_Web_Token
+    enabled: true
+    pattern: \b(eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9._-]{10,}|eyJ[A-Za-z0-9_\/+-]{10,}\.[A-Za-z0-9._\/+-]{10,})\b
+  # Swagger UI
+  - id: Swagger_UI
+    enabled: true
+    pattern: \b((swagger-ui.html)|(\"swagger\":)|(Swagger UI)|(swaggerUi))\b
+
   # 邮箱
   - id: email
     enabled: false
