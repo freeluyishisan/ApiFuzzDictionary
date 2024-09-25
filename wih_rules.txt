@@ -86,8 +86,6 @@ rules:
   - id: SSH_Private_Key
     enabled: true
     pattern: \b([-]+BEGIN [^\s]+ PRIVATE KEY[-])\b
-
-	
   # 邮箱
   - id: email
     enabled: true
