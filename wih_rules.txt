@@ -2,50 +2,72 @@ rules:
   # 域名，内置规则
   - id: domain
     enabled: true
+
   # IP，内置规则
   - id: ip
     enabled: false
+
   # 路径，内置规则
   - id: path
     enabled: false
+
   # URL主机部分为域名，内置规则
   - id: domain_url
     enabled: true
+
   # URL主机部分为IP，内置规则
   - id: ip_url
     enabled: true
+
   # Shiro
   - id: Shiro
     enabled: true
     pattern: \b(=deleteMe|rememberMe=)\b
+
   # 文件名规则
   - id: Filename
     enabled: true
     pattern: \b(?:filename|filepath|inputfile|readfile|download|file)=([^\s]+)\b
+
   # JSON Web Token
   - id: JSON_Web_Token
     enabled: true
     pattern: \b(eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9._-]{10,}|eyJ[A-Za-z0-9_\/+-]{10,}\.[A-Za-z0-9._\/+-]{10,})\b
+
   # Swagger UI
   - id: Swagger_UI
     enabled: true
     pattern: \b((swagger-ui.html)|(\"swagger\":)|(Swagger UI)|(swaggerUi))\b
+
   # Ueditor
   - id: Ueditor
     enabled: true
     pattern: \b(ueditor\.(config|all)\.js)\b
+
   # MAC Address
   - id: MAC_Address
     enabled: true
     pattern: \b(^([a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5})|[^a-zA-Z0-9]([a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5}))\b
+
   # Chinese Bank Card ID
   - id: Chinese_Bank_Card_ID
     enabled: true
     pattern: \b[^0-9]([1-9]\d{12,18})[^0-9]\b
+
   # RCE Parameters
   - id: RCE_Parameters
     enabled: true
     pattern: \b((cmd=)|(exec=)|(command=)|(execute=)|(ping=)|(query=)|(jump=)|(code=)|(reg=)|(do=)|(func=)|(arg=)|(option=)|(load=)|(process=)|(step=)|(read=)|(function=)|(feature=)|(exe=)|(module=)|(payload=)|(run=)|(daemon=)|(upload=)|(dir=)|(download=)|(log=)|(ip=)|(cli=))\b
+
+  # SSRF Parameters
+  - id: SSRF_Parameters
+    enabled: true
+    pattern: \b((share=)|(file=)|(wap=)|(link=)|(src=)|(source=)|(target=)|(u=)|(display=)|(sourceURl=)|(imageURL=)|(domain=)|(wap=))\b
+
+  # API URL
+  - id: api_url
+    enabled: true
+    pattern: \b((type:"POST")|(path:")|(url:"))\b
 
   # Java Deserialization
   - id: Java_Deserialization
