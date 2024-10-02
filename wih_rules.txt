@@ -28,7 +28,10 @@ rules:
   - id: Filename
     enabled: true
     pattern: \b(?:filename|filepath|inputfile|readfile|download|file)=([^\s]+)\b
-
+  # API二级目录规则
+  - id: baseUrl
+    enabled: true
+    pattern: \b(?:baseUrl|baseurl|baseURL):"([^\s]+)\b
   # JSON Web Token
   - id: JSON_Web_Token
     enabled: true
