@@ -82,7 +82,7 @@ rules:
     pattern: \b((access=)|(adm=)|(admin=)|(alter=)|(cfg=)|(clone=)|(config=)|(create=)|(dbg=)|(debug=)|(delete=)|(disable=)|(edit=)|(enable=)|(exec=)|(execute=)|(grant=)|(load=)|(make=)|(modify=)|(rename=)|(reset=)|(root=)|(shell=)|(test=)|(toggl=))\b
   # URL As A Value
   - id: URL_As_A_Value
-    enabled: true
+    enabled: false
     pattern: \b(=(https?://.*|https?%3(a|A)%2(f|F)%2(f|F).*))\b
   # Upload Form
   - id: Upload_Form
@@ -94,7 +94,7 @@ rules:
     pattern: \b((size=)|(page=)|(num=))\b
   # JSONP Response
   - id: JSONP_Response
-    enabled: true
+    enabled: false
     pattern: \b(^(\w.*?)\()\b
   # OSS
   - id: OSS
